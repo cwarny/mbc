@@ -1,0 +1,249 @@
+<div class="row">
+	<div class="col-8">
+		<div class="row">
+			<div class="col-12">
+				<h3 class="title">{{uppercase model.fullName}}</h3>
+				<div>Customer since {{date-format model.createdAt}}, spent {{dollar-format model.totalSpent}} so far</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<h3 class="subtitle">CUSTOMER PROFILE</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4">
+						<div class="row">
+							<div class="col-12">
+								<div class="row">
+									<div class="col-4 section-title">Age</div>
+									<div class="col-8">{{model.age}}</div>
+								</div>
+								<div class="row">
+									<div class="col-4 section-title">Bra size</div>
+									<div class="col-8">{{model.currentSize}}/{{model.computedSize}}</div>
+								</div>
+								<div class="row">
+									<div class="col-4 section-title">Brand</div>
+									<div class="col-8">{{model.currentManufacturer}}</div>
+								</div>
+								<div class="row">
+									<div class="col-4 section-title">Dress size</div>
+									<div class="col-8">{{model.currentDressSize}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-8">
+						<div class="row">
+							<div class="col-12">
+								<div class="row">
+									<div class="col-4 section-title">Recurring orders</div>
+									<div class="col-8">{{model.recurring}}</div>
+								</div>
+								<div class="row">
+									<div class="col-4 section-title">Panty allowance</div>
+									<div class="col-8">{{dollar-format model.allowancePanty.min}} - {{dollar-format model.allowancePanty.max}}</div>
+								</div>
+								<div class="row">
+									<div class="col-4 section-title">Frustrations</div>
+									<div class="col-8">
+										<ul class="no-bullets">
+											{{#each model.likeFit as |frustration|}}
+												<li>{{frustration}}</li>
+											{{/each}}
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-4">
+		<h3 class="subtitle">CONTACT</h3>
+		<div>{{model.email}}</div>
+		<div>{{model.defaultAddress.phone}}</div>
+		<hr>
+		<h3 class="subtitle">ADDRESS</h3>
+		<div>{{model.defaultAddress.address1}}</div>
+		<div>{{model.defaultAddress.address2}}</div>
+		<div>{{model.defaultAddress.city}}, {{model.defaultAddress.province_code}} {{model.defaultAddress.zip}}</div>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-4 border border-top-0 border-bottom-0 border-left-0">
+		<div class="row">
+			<div class="col-12">
+				<h3 class="subtitle">STYLE</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<div class="row">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-5 section-title">Coverage</div>
+							<div class="col-7">
+								<ul class="no-bullets">
+									{{#each model.styleCoverage as |coverage|}}
+										<li>{{coverage}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-5 section-title">Design</div>
+							<div class="col-7">
+								<ul class="no-bullets">
+									{{#each model.styleDesign as |design|}}
+										<li>{{design}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-5 section-title">Wardrobe</div>
+							<div class="col-7">
+								<ul class="no-bullets">
+									{{#each model.styleWardrobe as |wardrobe|}}
+										<li>{{wardrobe}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="row">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-4 section-title">Bottom</div>
+							<div class="col-8">
+								<ul class="no-bullets">
+									{{#each model.styleBottom as |bottom|}}
+										<li>{{bottom}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-4 section-title">Top</div>
+							<div class="col-8">
+								<ul class="no-bullets">
+									{{#each model.styleTop as |top|}}
+										<li>{{top}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-3 border border-top-0 border-bottom-0 border-left-0">
+		<div class="row">
+			<div class="col-12">
+				<h3 class="subtitle">MEASUREMENTS</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<div class="row">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-4 section-title">Lying</div>
+							<div class="col-8">{{model.measureLying}}</div>
+						</div>
+						<div class="row">
+							<div class="col-4 section-title">Waist</div>
+							<div class="col-8 section-title">{{model.measureWaist}}</div>
+						</div>
+						<div class="row">
+							<div class="col-4 section-title">Tight</div>
+							<div class="col-8 section-title">{{model.measureTight}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="row">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-4 section-title">Standing</div>
+							<div class="col-8">{{model.measureStanding}}</div>
+						</div>
+						<div class="row">
+							<div class="col-4 section-title">Snug</div>
+							<div class="col-8">{{model.measureSnug}}</div>
+						</div>
+						<div class="row">
+							<div class="col-4 section-title">Leaning</div>
+							<div class="col-8">{{model.measureLeaning}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-3 border border-top-0 border-bottom-0 border-left-0">
+		<div class="row">
+			<div class="col-12">
+				<h3 class="subtitle">SHAPE</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5 section-title">Inbetween</div>
+			<div class="col-7">{{model.shapeSpaceBetween}}</div>
+		</div>
+		<div class="row">
+			<div class="col-5 section-title">Fuller</div>
+			<div class="col-7">{{model.shapeFuller}}</div>
+		</div>
+		<div class="row">
+			<div class="col-5 section-title">Spread</div>
+			<div class="col-7">{{model.shapeSpread}}</div>
+		</div>
+	</div>
+	<div class="col-2">
+		<div class="row">
+			<div class="col-12">
+				<h3 class="subtitle">SURGERY HISTORY</h3>
+			</div>
+		</div>
+		{{#if model.surgeryNone}}
+			<div class="row">
+				<div class="col-12">No surgery history</div>
+			</div>	
+		{{else}}
+			{{#if model.surgeryAugmentation}}
+				<div class="row">
+					<div class="col-3 section-title">Augmentation</div>
+				</div>
+			{{/if}}
+			{{#if model.surgeryMastectomy}}
+				<div class="row">
+					<div class="col-3 section-title">Mastectomy</div>
+				</div>
+			{{/if}}
+			{{#if model.surgeryMaleFemale}}
+				<div class="row">
+					<div class="col-3 section-title">Transgender</div>
+				</div>
+			{{/if}}
+			{{#if model.surgeryReduction}}
+				<div class="row">
+					<div class="col-3 section-title">Reduction</div>
+				</div>
+			{{/if}}
+		{{/if}}
+	</div>
+</div>

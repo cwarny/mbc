@@ -1,0 +1,66 @@
+.main {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 14px;
+}
+
+.title {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 50px;
+}
+
+.subtitle {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 25px;
+	color: grey;
+}
+
+.section-title {
+	font-weight: bolder;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+input.permafocus {
+	background: none;
+	color: red;
+	border: none;
+	outline: none;
+}
+
+.alert {
+	color: red;
+}
+
+.success {
+	color: green;
+}
+
+.list-header {
+	color:#8a8a8a;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-bottom: 10px;
+	margin-right: 7px;
+	display: inline;
+}
+
+ul.no-bullets {
+	list-style-type: none;
+	padding-left: 0px;
+	margin-bottom: 0px;
+}
+
+.card-title {
+	margin-top: 6px;
+}
+
+h5 {
+	margin-bottom: 0px;
+}
+
+.badge-success {
+	font-size: 15px;
+}

@@ -1,0 +1,64 @@
+<div class="row">
+	<div class="col-3">
+		<div class="row">
+			<div class="col">
+				<div class="row">
+					<div class="col-5 section-title">COVERAGE</div>
+					<div class="col-7">
+						<ul class="no-bullets">
+							{{#each model.styleCoverage as |coverage|}}
+								<li>{{coverage}}</li>
+							{{/each}}
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-5 section-title">DESIGN</div>
+					<div class="col-7">
+						<ul class="no-bullets">
+							{{#each model.styleDesign as |design|}}
+								<li>{{design}}</li>
+							{{/each}}
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-5 section-title">WARDROBE</div>
+					<div class="col-7">
+						<ul class="no-bullets">
+							{{#each model.styleWardrobe as |wardrobe|}}
+								<li>{{wardrobe}}</li>
+							{{/each}}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-3">
+		<div class="row">
+			<div class="col">
+				<div class="row">
+					<div class="col-4 section-title">BOTTOM</div>
+					<div class="col-8">
+						<ul class="no-bullets">
+							{{#each model.styleBottom as |bottom|}}
+								<li>{{bottom}}</li>
+							{{/each}}
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4 section-title">TOP</div>
+					<div class="col-8">
+						<ul class="no-bullets">
+							{{#each model.styleTop as |top|}}
+								<li>{{top}}</li>
+							{{/each}}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

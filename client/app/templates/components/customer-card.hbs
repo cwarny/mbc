@@ -1,0 +1,27 @@
+<div class="card">
+	<div class="card-body">
+		<div class="row">
+			<div class="col-2">
+				<h4 class="card-title">
+					{{model.fullName}}
+				</h4>
+			</div>
+			<div class="col-10">
+				<nav class="nav nav-pills">
+					{{#each dimensions as |dim|}}
+						<span class="nav-item nav-link list-header clickable {{if (eq dimension dim.component) "active"}}" onclick={{action (mut dimension) dim.component}}>{{dim.label}}</span>
+					{{/each}}
+				</nav>
+			</div>
+		</div>
+		<p class="card-text">
+			<div class="row">
+				<div class="col fade-card">
+					{{#liquid-bind dimension as |currentDim|}}
+						{{component currentDim model=model}}
+					{{/liquid-bind}}
+				</div>
+			</div>
+		</p>
+	</div>
+</div>

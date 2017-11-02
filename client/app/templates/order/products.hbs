@@ -1,0 +1,237 @@
+{{#from-elsewhere name="bottom" as |order|}}
+	<div class="row">
+		<div class="col">
+			<div class="pull-right">{{number-format model.meta.total}} results</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<div class="list-header">Brand</div>
+			{{#power-select-multiple
+				options=brands
+				search=(perform searchTask 'brand')
+				selected=brand 
+				onchange=(action (mut brand)) as |brand|}}
+				{{brand}}
+			{{/power-select-multiple}}
+		</div>
+		<div class="col-3">
+			<div class="list-header">Season</div>
+			{{#power-select-multiple
+				options=seasons
+				search=(perform searchTask 'season')
+				selected=season 
+				onchange=(action (mut season)) as |season|}}
+				{{season}}
+			{{/power-select-multiple}}
+		</div>
+		<div class="col-3">
+			<div class="list-header">Color</div>
+			{{#power-select-multiple
+				options=colors
+				search=(perform searchTask 'color')
+				selected=color 
+				onchange=(action (mut color)) as |color|}}
+				{{color}}
+			{{/power-select-multiple}}
+		</div>
+		<div class="col-3">
+			<div class="list-header">Style</div>
+			{{#power-select-multiple
+				options=styles
+				search=(perform searchTask 'style')
+				selected=style 
+				onchange=(action (mut style)) as |style|}}
+				{{style}}
+			{{/power-select-multiple}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<div class="list-header">Cup</div>
+			{{#power-select-multiple
+				options=cups
+				search=(perform searchTask 'adjusted_cup_size')
+				selected=adjusted_cup_size 
+				onchange=(action (mut adjusted_cup_size)) as |cup|}}
+				{{cup}}
+			{{/power-select-multiple}}
+		</div>
+		<div class="col-3">
+			<div class="list-header">Band</div>
+			{{#power-select-multiple
+				options=bands
+				search=(perform searchTask 'adjusted_band_size')
+				selected=adjusted_band_size 
+				onchange=(action (mut adjusted_band_size)) as |band|}}
+				{{band}}
+			{{/power-select-multiple}}
+		</div>
+		<div class="col-3">
+			<div class="list-header">Range</div>
+			{{#power-select-multiple
+				options=ranges
+				search=(perform searchTask 'range')
+				selected=range 
+				onchange=(action (mut range)) as |range|}}
+				{{range}}
+			{{/power-select-multiple}}
+		</div>
+		<div class="col-3">
+			<div class="list-header">Category</div>
+			{{#power-select-multiple
+				options=categories
+				search=(perform searchTask 'category')
+				selected=category 
+				onchange=(action (mut category)) as |category|}}
+				{{category}}
+			{{/power-select-multiple}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<div class="list-header">Subcategory</div>
+			{{#power-select-multiple
+				options=subcategories
+				search=(perform searchTask 'subcategory')
+				selected=subcategory 
+				onchange=(action (mut subcategory)) as |subcategory|}}
+				{{subcategory}}
+			{{/power-select-multiple}}
+		</div>
+		<div class="col-3">
+			<div class="list-header">Coverage</div>
+			{{#power-select-multiple
+				options=coverages
+				search=(perform searchTask 'style_coverage')
+				selected=style_coverage 
+				onchange=(action (mut style_coverage)) as |coverage|}}
+				{{coverage}}
+			{{/power-select-multiple}}
+		</div>
+		<div class="col-3">
+			<div class="list-header">Design</div>
+			{{#power-select-multiple
+				options=designs
+				search=(perform searchTask 'style_design')
+				selected=style_design 
+				onchange=(action (mut style_design)) as |design|}}
+				{{design}}
+			{{/power-select-multiple}}
+		</div>
+		<div class="col-3">
+			<div class="list-header">Wardrobe</div>
+			{{#power-select-multiple
+				options=wardrobes
+				search=(perform searchTask 'style_wardrobe')
+				selected=style_wardrobe 
+				onchange=(action (mut style_wardrobe)) as |wardrobe|}}
+				{{wardrobe}}
+			{{/power-select-multiple}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<div class="list-header">Vertical fullness fit</div>
+			{{#power-select-multiple
+				options=fullnessFits
+				search=(perform searchTask 'vertical_fullness_fit')
+				selected=vertical_fullness_fit 
+				onchange=(action (mut vertical_fullness_fit)) as |fullness|}}
+				{{fullness}}
+			{{/power-select-multiple}}
+		</div>
+		<div class="col-3">
+			<div class="list-header">Root width fit</div>
+			{{#power-select-multiple
+				options=rootFits
+				search=(perform searchTask 'root_width_fit')
+				selected=root_width_fit 
+				onchange=(action (mut root_width_fit)) as |root|}}
+				{{root}}
+			{{/power-select-multiple}}
+		</div>
+		<div class="col-3">
+			<div class="list-header">Placement spread</div>
+			{{#power-select-multiple
+				options=spreads
+				search=(perform searchTask 'placement_spread')
+				selected=placement_spread 
+				onchange=(action (mut placement_spread)) as |spread|}}
+				{{spread}}
+			{{/power-select-multiple}}
+		</div>
+		<div class="col-3">
+			<div class="list-header">Projected</div>
+			{{#power-select-multiple
+				options=projectedOptions
+				search=(perform searchTask 'projected')
+				selected=projected 
+				onchange=(action (mut projected)) as |projected|}}
+				{{projected}}
+			{{/power-select-multiple}}
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col fancy-table">
+			{{#liquid-bind page}}
+				<table class="table table-hover table-sm">
+					<thead>
+						<tr>
+							<th>UPC</th>
+							<th>Brand</th>
+							<th>Range</th>
+							<th>Category</th>
+							<th>Season</th>
+							<th>Color</th>
+							<th>Size</th>
+							<th>Style</th>
+							<th>MSRP</th>
+							<th>WSHL</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each model as |product|}}
+							<tr class="clickable {{if product.picked "table-info"}}" onclick={{action (if product.picked order.remove order.add) product}}>
+								<th scope="row">{{product.upc}}</th>
+								<td>{{titlecase product.brand}}</td>
+								<td>{{titlecase product.range}}</td>
+								<td>{{product.category}}</td>
+								<td>{{product.season}}</td>
+								<td>{{titlecase product.color}}</td>
+								<td>{{product.size}}</td>
+								<td>{{product.style}}</td>
+								<td>{{dollar-format product.msrp}}</td>
+								<td>{{dollar-format product.whsl}}</td>
+							</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			{{/liquid-bind}}
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-3">
+			<nav>
+				<ul class="pagination">
+					<li onclick={{action 'decrementPage'}} class="page-item clickable {{if (eq pages.firstObject 1) 'disabled'}}">
+						<span class="page-link" href aria-label="Previous">
+							<span>&laquo;</span>
+						</span>
+					</li>
+					{{#each pages as |p|}}
+						<li class="page-item clickable {{if (eq page p) "active"}}" onclick={{action (mut page) p}}>
+							<span class="page-link" href>{{p}}</span>
+						</li>
+					{{/each}}
+					<li onclick={{action 'incrementPage'}} class="page-item clickable {{if (eq pages.lastObject totalPages) 'disabled'}}">
+						<span class="page-link" href aria-label="Next">
+							<span>&raquo;</span>
+						</span>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+{{/from-elsewhere}}

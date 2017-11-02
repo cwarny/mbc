@@ -1,0 +1,83 @@
+<br>
+<div class="row align-items-center">
+	<div class="col-3">
+		<h3 class="title">Order #{{model.orderNumber}}</h3>
+	</div>
+	<div class="col-9">
+		{{#each model.basket as |item|}}
+			<button class="btn btn-info disabled">
+				{{item.brand}} {{item.style}} {{titlecase item.color}} {{item.size}}
+				{{#unless model.invoiceId}}
+					<span class="badge badge-secondary clickable" onclick={{action "removeFromBasket" item}}>{{fa-icon "close"}}</span>
+				{{/unless}}
+			</button>
+		{{/each}}
+		{{#unless model.invoiceId}}
+			{{#if model.basket.length}}
+				<button class="btn btn-outline-dark pull-right clickable" onclick={{perform checkout}}>
+					{{#if checkout.isRunning}}
+						{{fa-icon "spinner" spin=true}}
+					{{else}}
+						Invoice
+					{{/if}}
+				</button>
+			{{/if}}
+		{{/unless}}
+	</div>
+</div>
+<div class="row">
+	<div class="col-2">
+		<div class="list-header">Items</div>
+		<div>
+			{{#each model.lineItems as |item|}}
+				{{item.type}}
+			{{/each}}
+		</div>
+	</div>
+	<div class="col-2">
+		<div class="list-header">Subscription</div>
+		<div>
+			{{#if model.customer.recurring}}
+				Recurrent (every {{model.customer.checkoutFrequency}} days)
+			{{else}}
+				One-off
+			{{/if}}
+		</div>
+	</div>
+	<div class="col-2">
+		<div class="list-header">Date</div>
+		<div>{{date-format model.createdAt}}</div>
+	</div>
+	<div class="col-2">
+		<div class="list-header">Value</div>
+		<div>{{dollar-format model.totalPrice}}</div>
+	</div>
+	<div class="col-2">
+		<div class="list-header">Status</div>
+		<div>{{titlecase model.financialStatus}}</div>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col">
+		{{customer-card model=model.customer}}
+	</div>
+</div>
+<br>
+{{#unless model.invoiceId}}
+	{{#if (eq target.currentPath "order.index")}}
+		{{#link-to "order.products" tagName="button" class="btn btn-secondary clickable" type="button"}}
+			Pick items
+		{{/link-to}}
+	{{else}}
+		{{#link-to "order.index" tagName="button" class="btn btn-light clickable" type="button"}}
+			Hide items
+		{{/link-to}}
+	{{/if}}
+{{/unless}}
+{{to-elsewhere named="bottom" send=(hash add=(action 'addToBasket') remove=(action 'removeFromBasket') basket=model.basket)}}
+<div class="row">
+	<div class="col">
+		{{outlet}}
+	</div>
+</div>

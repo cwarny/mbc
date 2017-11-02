@@ -1,0 +1,56 @@
+<br>
+<div class="row">
+	<div class="col">
+		{{permafocus-input task=searchTask value=text}}
+		{{#if error}}
+			<span class="alert alert-danger" role="alert">{{error}}</span>
+		{{/if}}
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col">
+		{{#if scanned.length}}
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Description</th>
+						<th>UPC</th>
+						<th>Type</th>
+						<th>Brand</th>
+						<th>Season</th>
+						<th>Color</th>
+						<th>Size</th>
+						<th>Style</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each scanned as |product|}}
+						<tr>
+							<td>{{product.item.description}}</td>
+							<td>{{product.item.upc}}</td>
+							<td>{{product.item.itemType}}</td>
+							<td>{{product.item.brand}}</td>
+							<td>{{product.item.season}}</td>
+							<td>{{product.item.color}}</td>
+							<td>{{product.item.size}}</td>
+							<td>{{product.item.style}}</td>
+							<td>
+								{{#if product.task.isRunning}}
+									{{fa-icon "spinner" spin=true}}
+								{{else}}
+									{{#if product.task.isSuccessful}}
+										{{fa-icon "thumbs-up" class="success"}}
+									{{else}}
+										{{fa-icon "thumbs-down" class="alert"}}
+									{{/if}}
+								{{/if}}
+							</td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		{{/if}}
+	</div>
+</div>

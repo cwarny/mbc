@@ -1,0 +1,25 @@
+<br>
+<table class="table table-sm table-hover">
+	<thead>
+		<tr>
+			<th>ORDER #</th>
+			<th>DATE</th>
+			<th>CUSTOMER</th>
+			<th>FINANCIAL STATUS</th>
+			<th>FULFILLMENT STATUS</th>
+			<th>PRICE</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each sortedOrders as |order|}}
+			{{#link-to "order" order.id tagName="tr" class="clickable"}}
+				<th>{{order.orderNumber}}</th>
+				<td>{{date-format order.createdAt}}</td>
+				<td>{{order.customer.fullName}}</td>
+				<td>{{order.financialStatus}}</td>
+				<td>{{order.fulfillmentStatus}}</td>
+				<td>{{dollar-format order.totalPrice}}</td>
+			{{/link-to}}
+		{{/each}}
+	</tbody>
+</table>

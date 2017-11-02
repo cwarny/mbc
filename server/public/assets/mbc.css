@@ -1,0 +1,28 @@
+body {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 16px;
+}
+
+.title {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 50px;
+}
+
+.subtitle {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 25px;
+	color: grey;
+}
+
+.section-title {
+	font-weight: bolder;
+}
+
+
+input {
+	background: none;
+	/*color: transparent;*/
+	color: red;
+	border: none;
+	outline: none;
+}

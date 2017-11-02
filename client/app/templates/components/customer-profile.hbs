@@ -1,0 +1,44 @@
+<div class="row">
+	<div class="col-3">
+		<div class="row">
+			<div class="col">
+				<div class="row">
+					<div class="col-4 section-title">AGE</div>
+					<div class="col-8">{{model.age}}</div>
+				</div>
+				<div class="row">
+					<div class="col-4 section-title">BRA SIZE</div>
+					<div class="col-8">{{model.currentSize}}/{{model.computedSize}}</div>
+				</div>
+				<div class="row">
+					<div class="col-4 section-title">BRAND</div>
+					<div class="col-8">{{model.currentManufacturer}}</div>
+				</div>
+				<div class="row">
+					<div class="col-4 section-title">DRESS SIZE</div>
+					<div class="col-8">{{model.currentDressSize}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-9">
+		<div class="row">
+			<div class="col">
+				<div class="row">
+					<div class="col-2 section-title">PANTY ALLOWANCE</div>
+					<div class="col-10">{{dollar-format model.allowancePanty.min}} - {{dollar-format model.allowancePanty.max}}</div>
+				</div>
+				<div class="row">
+					<div class="col-2 section-title">FRUSTRATIONS</div>
+					<div class="col-10">
+						<ul class="no-bullets">
+							{{#each model.likeFit as |frustration|}}
+								<li>{{frustration}}</li>
+							{{/each}}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

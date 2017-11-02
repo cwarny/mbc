@@ -1,0 +1,26 @@
+{{#if model.surgeryNone}}
+	<div class="row">
+		<div class="col">No surgery history</div>
+	</div>	
+{{else}}
+	{{#if model.surgeryAugmentation}}
+		<div class="row">
+			<div class="col-3 section-title">Augmentation</div>
+		</div>
+	{{/if}}
+	{{#if model.surgeryMastectomy}}
+		<div class="row">
+			<div class="col-3 section-title">Mastectomy</div>
+		</div>
+	{{/if}}
+	{{#if model.surgeryMaleFemale}}
+		<div class="row">
+			<div class="col-3 section-title">Transgender</div>
+		</div>
+	{{/if}}
+	{{#if model.surgeryReduction}}
+		<div class="row">
+			<div class="col-3 section-title">Reduction</div>
+		</div>
+	{{/if}}
+{{/if}}

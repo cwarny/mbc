@@ -1,0 +1,2554 @@
+{
+	"mappings": {
+		"client": {
+			"_all": { "enabled": false },
+			"properties": {
+				"last_cdc_timestamp": {
+					"type": "date",
+					"format": "date_time"
+				},
+				"x_refresh_token_expires_in": {
+					"type": "keyword"
+				},
+				"expires_in": {
+					"type": "integer"
+				},
+				"access_token": {
+					"type": "keyword"
+				},
+				"token_type": {
+					"type": "keyword"
+				},
+				"refresh_token": {
+					"type": "keyword"
+				}
+			}
+		},
+		"customer": {
+			"_all": { "enabled": false },
+			"properties": {
+				"shopify_id": {
+					"type": "long"
+				},
+				"quickbooks_id": {
+					"type": "keyword"
+				},
+				"total_spent": {
+					"type": "float"
+				},
+				"recurring": {
+					"type": "boolean"
+				},
+				"email": {
+					"type": "keyword"
+				},
+				"phone": {
+					"type": "keyword"
+				},
+				"age": {
+					"type": "integer"
+				},
+				"how": {
+					"type": "keyword"
+				},
+				"created_at": {
+					"type": "date",
+					"format": "date_time_no_millis"
+				},
+				"first_name": {
+					"type": "keyword"
+				},
+				"last_name": {
+					"type": "keyword"
+				},
+				"state": {
+					"type": "keyword"
+				},
+				"is_happy": {
+					"type": "boolean"
+				},
+				"surgery_augmentation": {
+					"type": "boolean"
+				},
+				"surgery_mastectomy": {
+					"type": "boolean"
+				},
+				"allowance_bra": {
+					"properties": {
+						"min": {
+							"type": "integer"
+						},
+						"max": {
+							"type": "integer"
+						}
+					}
+				},
+				"allowance_panty": {
+					"properties": {
+						"min": {
+							"type": "integer"
+						},
+						"max": {
+							"type": "integer"
+						}
+					}
+				},
+				"computed_cup_size": {
+					"type": "keyword"
+				},
+				"current_manufacturer": {
+					"type": "keyword"
+				},
+				"surgery_male_female": {
+					"type": "boolean"
+				},
+				"style_coverage": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"current_band_size": {
+					"type": "integer"
+				},
+				"style_top": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"style_design": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"surgery_reduction": {
+					"type": "boolean"
+				},
+				"shape_space_between": {
+					"type": "integer"
+				},
+				"shape_fuller": {
+					"type": "keyword"
+				},
+				"current_cup_size": {
+					"type": "keyword"
+				},
+				"measure_lying": {
+					"type": "float"
+				},
+				"user_name": {
+					"type": "keyword"
+				},
+				"style_wardrobe": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"measure_waist": {
+					"type": "float"
+				},
+				"current_pant_size": {
+					"type": "integer"
+				},
+				"current_dress_size": {
+					"type": "integer"
+				},
+				"measure_tight": {
+					"type": "float"
+				},
+				"shape_spread": {
+					"type": "integer"
+				},
+				"current_band_size_dd": {
+					"type": "integer"
+				},
+				"measure_standing": {
+					"type": "float"
+				},
+				"measure_snug": {
+					"type": "float"
+				},
+				"measure_leaning": {
+					"type": "float"	
+				},
+				"computed_band_size": {
+					"type": "integer"
+				},
+				"like_fit": {
+					"type": "text"
+				},
+				"current_cup_size_dd": {
+					"type": "keyword"
+				},
+				"is_pregnant": {
+					"type": "boolean"
+				},
+				"checkout_frequency": {
+					"type": "integer"
+				},
+				"surgery_none": {
+					"type": "boolean"
+				},
+				"computed_sister_size": {
+					"type": "integer"	
+				},
+				"style_bottom": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"addresses": {
+					"properties": {
+						"id": {
+							"type": "long"
+						},
+						"first_name": {
+							"type": "keyword"
+						},
+						"last_name": {
+							"type": "keyword"
+						},
+						"company": {
+							"type": "keyword"
+						},
+						"address1": {
+							"type": "keyword"
+						},
+						"address2": {
+							"type": "keyword"
+						},
+						"city": {
+							"type": "keyword"
+						},
+						"province": {
+							"type": "keyword"
+						},
+						"country": {
+							"type": "keyword"
+						},
+						"zip": {
+							"type": "keyword"
+						},
+						"phone": {
+							"type": "keyword"
+						},
+						"province_code": {
+							"type": "keyword"
+						},
+						"country_code": {
+							"type": "keyword"
+						},
+						"country_name": {
+							"type": "keyword"	
+						},
+						"default": {
+							"type": "boolean"
+						}
+					}
+				},
+				"default_address": {
+					"properties": {
+						"id": {
+							"type": "long"
+						},
+						"first_name": {
+							"type": "keyword"
+						},
+						"last_name": {
+							"type": "keyword"
+						},
+						"company": {
+							"type": "keyword"
+						},
+						"address1": {
+							"type": "keyword"
+						},
+						"address2": {
+							"type": "keyword"
+						},
+						"city": {
+							"type": "keyword"
+						},
+						"province": {
+							"type": "keyword"
+						},
+						"country": {
+							"type": "keyword"
+						},
+						"zip": {
+							"type": "keyword"
+						},
+						"phone": {
+							"type": "keyword"
+						},
+						"province_code": {
+							"type": "keyword"
+						},
+						"country_code": {
+							"type": "keyword"
+						},
+						"country_name": {
+							"type": "keyword"	
+						},
+						"default": {
+							"type": "boolean"
+						}
+					}
+				}
+			}
+		},
+		"order": {
+			"_all": { "enabled": false },
+			"properties": {
+				"invoice_id": {
+					"type": "keyword"
+				},
+				"basket": {
+					"properties": {
+						"quickbooks_id": {
+							"type": "keyword"
+						},
+						"shopify_id": {
+							"type": "keyword"
+						},
+						"type": {
+							"type": "keyword"
+						},
+						"upc": {
+							"type": "keyword",
+							"fields": {
+								"suggest": {
+									"type": "completion",
+									"analyzer": "keyword"
+								}
+							}
+						},
+						"brand": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"style": {
+							"type": "text",
+							"fields": {
+								"raw": {
+									"type": "keyword"
+								}
+							}
+						},
+						"item_type": {
+							"type": "text",
+							"fields": {
+								"raw": {
+									"type": "keyword"
+								}
+							}
+						},
+						"range": {
+							"type": "text",
+							"fields": {
+								"raw": {
+									"type": "keyword"
+								}
+							}
+						},
+						"category": {
+							"type": "text",
+							"fields": {
+								"raw": {
+									"type": "keyword"
+								}
+							}
+						},
+						"subcategory": {
+							"type": "text",
+							"fields": {
+								"raw": {
+									"type": "keyword"
+								}
+							}
+						},
+						"similar_fit": {
+							"type": "text",
+							"fields": {
+								"raw": {
+									"type": "keyword"
+								}
+							}
+						},
+						"description": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"color": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								},
+								"suggest": {
+									"type": "completion"
+								}
+							}
+						},
+						"season": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"whsl": {
+							"type": "float"
+						},
+						"msrp": {
+							"type": "float"
+						},
+						"panty_size": {
+							"type": "keyword"
+						},
+						"band_size": {
+							"type": "integer"
+						},
+						"adjusted_band_size": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"adjusted_band_size_int": {
+							"type": "integer"
+						},
+						"cup_size": {
+							"type": "keyword"
+						},
+						"adjusted_cup_size": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"quantity": {
+							"type": "integer"
+						},
+						"similar_fit": {
+							"type": "keyword"
+						},
+						"style_coverage": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"style_design": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"style_wardrobe": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"vertical_fullness_fit": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"root_width_fit": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"placement_spread": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"projected": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"matching_panties": { 
+							"type": "keyword"
+						},
+						"hook_notes": { 
+							"type": "keyword"
+						},
+						"notes": { 
+							"type": "keyword"
+						},
+						"discontinued": {
+							"type": "boolean"
+						},
+						"panty_size": {
+							"type": "keyword"
+						},
+						"adjusted_panty_size": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						}
+					}
+				},
+				"email": {
+					"type": "keyword"
+				},
+				"closed_at": {
+					"type": "date"
+				},
+				"created_at": {
+					"type": "date",
+					"format": "date_time_no_millis"
+				},
+				"updated_at": {
+					"type": "date"
+				},
+				"number": {
+					"type": "integer"
+				},
+				"note": {
+					"type": "text"
+				},
+				"total_price": {
+					"type": "float"
+				},
+				"subtotal_price": {
+					"type": "float"
+				},
+				"total_weight": {
+					"type": "float"
+				},
+				"total_tax": {
+					"type": "float"
+				},
+				"taxes_included": {
+					"type": "boolean"
+				},
+				"tax_lines": {
+					"properties": {
+						"title": {
+							"type": "keyword"
+						},
+						"price": {
+							"type": "float"
+						},
+						"rate": {
+							"type": "float"
+						}
+					}
+				},
+				"currency": {
+					"type": "keyword"
+				},
+				"financial_status": {
+					"type": "keyword"
+				},
+				"total_discounts": {
+					"type": "float"
+				},
+				"total_line_items_price": {
+					"type": "float"
+				},
+				"name": {
+					"type": "keyword"
+				},
+				"cancelled_at": {
+					"type": "date"
+				},
+				"cancel_reason": {
+					"type": "keyword"
+				},
+				"total_price_usd": {
+					"type": "float"
+				},
+				"location_id": {
+					"type": "long"
+				},
+				"order_number": {
+					"type": "integer"
+				},
+				"fulfillment_status": {
+					"type": "keyword"
+				},
+				"tags": {
+					"type": "keyword"
+				},
+				"contact_email": {
+					"type": "keyword"
+				},
+				"items": {
+					"type": "keyword"
+				},
+				"line_items": {
+					"properties": {
+						"id": {
+							"type": "long"
+						},
+						"variant_id": {
+							"type": "long"
+						},
+						"title": {
+							"type": "keyword"
+						},
+						"quantity": {
+							"type": "integer"
+						},
+						"price": {
+							"type": "float"
+						},
+						"grams": {
+							"type": "float"
+						},
+						"sku": {
+							"type": "keyword"
+						},
+						"variant_title": {
+							"type": "keyword"
+						},
+						"product_id": {
+							"type": "long"
+						},
+						"gift_card": {
+							"type": "boolean"
+						},
+						"name": {
+							"type": "keyword"
+						},
+						"charge_delay": {
+							"type": "integer"
+						},
+						"recurring_price": {
+							"type": "float"
+						},
+						"shipping_interval_frequency": {
+							"type": "integer"
+						},
+						"shipping_interval_unit_type": {
+							"type": "keyword"
+						},
+						"total_discount": {
+							"type": "float"
+						},
+						"fulfillment_status": {
+							"type": "keyword"
+						},
+						"tax_lines": {
+							"properties": {
+								"title": {
+									"type": "keyword"
+								},
+								"price": {
+									"type": "float"
+								},
+								"rate": {
+									"type": "float"
+								}
+							}
+						}
+					}
+				},
+				"shipping_lines": {
+					"properties": {
+						"id": {
+							"type": "long"
+						},
+						"title": {
+							"type": "keyword"
+						},
+						"price": {
+							"type": "float"
+						},
+						"code": {
+							"type": "keyword"
+						}
+					}
+				},
+				"fulfillments": {
+					"properties": {
+						"id": {
+							"type": "long"
+						},
+						"order_id": {
+							"type": "long"	
+						},
+						"status": {
+							"type": "keyword"
+						},
+						"created_at": {
+							"type": "date",
+							"format": "date_time_no_millis"
+						},
+						"updated_at": {
+							"type": "date"
+						},
+						"tracking_company": {
+							"type": "keyword"
+						},
+						"tracking_number": {
+							"type": "keyword"
+						},
+						"tracking_numbers": {
+							"type": "keyword"
+						},
+						"tracking_url": {
+							"type": "keyword"
+						},
+						"tracking_urls": {
+							"type": "keyword"
+						},
+						"line_items": {
+							"properties": {
+								"id": {
+									"type": "long"
+								},
+								"variant_id": {
+									"type": "long"
+								},
+								"title": {
+									"type": "keyword"
+								},
+								"quantity": {
+									"type": "integer"
+								},
+								"price": {
+									"type": "float"
+								},
+								"grams": {
+									"type": "float"
+								},
+								"sku": {
+									"type": "keyword"
+								},
+								"variant_title": {
+									"type": "keyword"
+								},
+								"product_id": {
+									"type": "long"
+								},
+								"gift_card": {
+									"type": "boolean"
+								},
+								"name": {
+									"type": "keyword"
+								},
+								"charge_delay": {
+									"type": "integer"
+								},
+								"recurring_price": {
+									"type": "float"
+								},
+								"shipping_interval_frequency": {
+									"type": "integer"
+								},
+								"shipping_interval_unit_type": {
+									"type": "keyword"
+								},
+								"total_discount": {
+									"type": "float"
+								},
+								"fulfillment_status": {
+									"type": "keyword"
+								},
+								"tax_lines": {
+									"properties": {
+										"title": {
+											"type": "keyword"
+										},
+										"price": {
+											"type": "float"
+										},
+										"rate": {
+											"type": "float"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"billing_address": {
+					"properties": {
+						"first_name": {
+							"type": "keyword"
+						},
+						"last_name": {
+							"type": "keyword"
+						},
+						"address1": {
+							"type": "keyword"
+						},
+						"address2": {
+							"type": "keyword"
+						},
+						"phone": {
+							"type": "keyword"
+						},
+						"city": {
+							"type": "keyword"
+						},
+						"zip": {
+							"type": "keyword"
+						},
+						"province": {
+							"type": "keyword"
+						},
+						"country": {
+							"type": "keyword"
+						},
+						"company": {
+							"type": "keyword"
+						},
+						"location": {
+							"type": "geo_point"
+						},
+						"country_code": {
+							"type": "keyword"
+						},
+						"province_code": {
+							"type": "keyword"
+						}
+					}
+				},
+				"shipping_address": {
+					"properties": {
+						"first_name": {
+							"type": "keyword"
+						},
+						"last_name": {
+							"type": "keyword"
+						},
+						"address1": {
+							"type": "keyword"
+						},
+						"address2": {
+							"type": "keyword"
+						},
+						"phone": {
+							"type": "keyword"
+						},
+						"city": {
+							"type": "keyword"
+						},
+						"zip": {
+							"type": "keyword"
+						},
+						"province": {
+							"type": "keyword"
+						},
+						"country": {
+							"type": "keyword"
+						},
+						"company": {
+							"type": "keyword"
+						},
+						"location": {
+							"type": "geo_point"
+						},
+						"country_code": {
+							"type": "keyword"
+						},
+						"province_code": {
+							"type": "keyword"
+						}
+					}
+				},
+				"refunds": {
+					"properties": {
+						"id": {
+							"type": "long"
+						},
+						"order_id": {
+							"type": "long"
+						},
+						"created_at": {
+							"type": "date",
+							"format": "date_time_no_millis"
+						},
+						"note": {
+							"type": "text"
+						},
+						"restock": {
+							"type": "keyword"
+						},
+						"user_id": {
+							"type": "long"
+						},
+						"refund_line_items": {
+							"properties": {
+								"id": {
+									"type": "long"
+								},
+								"quantity": {
+									"type": "integer"
+								},
+								"line_item_id": {
+									"type": "long"
+								},
+								"subtotal": {
+									"type": "float"
+								},
+								"total_tax": {
+									"type": "float"
+								},
+								"line_item": {
+									"properties": {
+										"id": {
+											"type": "long"
+										},
+										"variant_id": {
+											"type": "long"
+										},
+										"title": {
+											"type": "keyword"
+										},
+										"quantity": {
+											"type": "integer"
+										},
+										"price": {
+											"type": "float"
+										},
+										"grams": {
+											"type": "float"
+										},
+										"sku": {
+											"type": "keyword"
+										},
+										"variant_title": {
+											"type": "keyword"
+										},
+										"product_id": {
+											"type": "long"
+										},
+										"gift_card": {
+											"type": "boolean"
+										},
+										"name": {
+											"type": "keyword"
+										},
+										"charge_delay": {
+											"type": "integer"
+										},
+										"recurring_price": {
+											"type": "float"
+										},
+										"shipping_interval_frequency": {
+											"type": "integer"
+										},
+										"shipping_interval_unit_type": {
+											"type": "keyword"
+										},
+										"total_discount": {
+											"type": "float"
+										},
+										"fulfillment_status": {
+											"type": "keyword"
+										},
+										"tax_lines": {
+											"properties": {
+												"title": {
+													"type": "keyword"
+												},
+												"price": {
+													"type": "float"
+												},
+												"rate": {
+													"type": "float"
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						"transactions": {
+							"properties": {
+								"id": {
+									"type": "long"
+								},
+								"order_id": {
+									"type": "long"
+								},
+								"amount": {
+									"type": "float"
+								},
+								"kind": {
+									"type": "keyword"
+								},
+								"status": {
+									"type": "keyword"
+								},
+								"message": {
+									"type": "keyword"
+								},
+								"created_at": {
+									"type": "date",
+									"format": "date_time_no_millis"
+								},
+								"currency": {
+									"type": "keyword"
+								},
+								"location_id": {
+									"type": "long"
+								},
+								"user_id": {
+									"type": "long"
+								},
+								"parent_id": {
+									"type": "long"
+								},
+								"device_id": {
+									"type": "long"
+								}
+							}
+						},
+						"order_adjustments": {
+							"properties": {
+								"id": {
+									"type": "long"
+								},
+								"order_id": {
+									"type": "long"
+								},
+								"refund_id": {
+									"type": "long"
+								},
+								"tax_amount": {
+									"type": "float"
+								},
+								"kind": {
+									"type": "keyword"
+								},
+								"reason": {
+									"type": "keyword"
+								}
+							}
+						}
+					}
+				},
+				"customer": {
+					"properties": {
+						"id": {
+							"type": "long"
+						},
+						"total_spent": {
+							"type": "float"
+						},
+						"recurring": {
+							"type": "boolean"
+						},
+						"email": {
+							"type": "keyword"
+						},
+						"phone": {
+							"type": "keyword"
+						},
+						"age": {
+							"type": "integer"
+						},
+						"how": {
+							"type": "keyword"
+						},
+						"created_at": {
+							"type": "date",
+							"format": "date_time_no_millis"
+						},
+						"first_name": {
+							"type": "keyword"
+						},
+						"last_name": {
+							"type": "keyword"
+						},
+						"state": {
+							"type": "keyword"
+						},
+						"is_happy": {
+							"type": "boolean"
+						},
+						"surgery_augmentation": {
+							"type": "boolean"
+						},
+						"surgery_mastectomy": {
+							"type": "boolean"
+						},
+						"allowance_bra": {
+							"properties": {
+								"min": {
+									"type": "integer"
+								},
+								"max": {
+									"type": "integer"
+								}
+							}
+						},
+						"allowance_panty": {
+							"properties": {
+								"min": {
+									"type": "integer"
+								},
+								"max": {
+									"type": "integer"
+								}
+							}
+						},
+						"computed_cup_size": {
+							"type": "keyword"
+						},
+						"current_manufacturer": {
+							"type": "keyword"
+						},
+						"surgery_male_female": {
+							"type": "boolean"
+						},
+						"style_coverage": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"current_band_size": {
+							"type": "integer"
+						},
+						"style_top": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"style_design": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"surgery_reduction": {
+							"type": "boolean"
+						},
+						"shape_space_between": {
+							"type": "integer"
+						},
+						"shape_fuller": {
+							"type": "keyword"
+						},
+						"current_cup_size": {
+							"type": "keyword"
+						},
+						"measure_lying": {
+							"type": "float"
+						},
+						"user_name": {
+							"type": "keyword"
+						},
+						"style_wardrobe": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"measure_waist": {
+							"type": "float"
+						},
+						"current_pant_size": {
+							"type": "integer"
+						},
+						"current_dress_size": {
+							"type": "integer"
+						},
+						"measure_tight": {
+							"type": "float"
+						},
+						"shape_spread": {
+							"type": "integer"
+						},
+						"current_band_size_dd": {
+							"type": "integer"
+						},
+						"measure_standing": {
+							"type": "float"
+						},
+						"measure_snug": {
+							"type": "float"
+						},
+						"measure_leaning": {
+							"type": "float"	
+						},
+						"computed_band_size": {
+							"type": "integer"
+						},
+						"like_fit": {
+							"type": "text"
+						},
+						"current_cup_size_dd": {
+							"type": "keyword"
+						},
+						"is_pregnant": {
+							"type": "boolean"
+						},
+						"checkout_frequency": {
+							"type": "integer"
+						},
+						"surgery_none": {
+							"type": "boolean"
+						},
+						"computed_sister_size": {
+							"type": "integer"	
+						},
+						"style_bottom": {
+							"type": "text",
+							"fields": {
+								"raw": { 
+									"type": "keyword"
+								}
+							}
+						},
+						"default_address": {
+							"properties": {
+								"id": {
+									"type": "long"
+								},
+								"first_name": {
+									"type": "keyword"
+								},
+								"last_name": {
+									"type": "keyword"
+								},
+								"company": {
+									"type": "keyword"
+								},
+								"address1": {
+									"type": "keyword"
+								},
+								"address2": {
+									"type": "keyword"
+								},
+								"city": {
+									"type": "keyword"
+								},
+								"province": {
+									"type": "keyword"
+								},
+								"country": {
+									"type": "keyword"
+								},
+								"zip": {
+									"type": "keyword"
+								},
+								"phone": {
+									"type": "keyword"
+								},
+								"province_code": {
+									"type": "keyword"
+								},
+								"country_code": {
+									"type": "keyword"
+								},
+								"country_name": {
+									"type": "keyword"	
+								},
+								"default": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"product": {
+			"_all": { "enabled": false },
+			"properties": {
+				"quickbooks_id": {
+					"type": "keyword"
+				},
+				"shopify_id": {
+					"type": "keyword"
+				},
+				"type": {
+					"type": "keyword"
+				},
+				"upc": {
+					"type": "keyword",
+					"fields": {
+						"suggest": {
+							"type": "completion",
+							"analyzer": "keyword"
+						}
+					}
+				},
+				"brand": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"style": {
+					"type": "text",
+					"fields": {
+						"raw": {
+							"type": "keyword"
+						}
+					}
+				},
+				"item_type": {
+					"type": "text",
+					"fields": {
+						"raw": {
+							"type": "keyword"
+						}
+					}
+				},
+				"range": {
+					"type": "text",
+					"fields": {
+						"raw": {
+							"type": "keyword"
+						}
+					}
+				},
+				"category": {
+					"type": "text",
+					"fields": {
+						"raw": {
+							"type": "keyword"
+						}
+					}
+				},
+				"subcategory": {
+					"type": "text",
+					"fields": {
+						"raw": {
+							"type": "keyword"
+						}
+					}
+				},
+				"similar_fit": {
+					"type": "text",
+					"fields": {
+						"raw": {
+							"type": "keyword"
+						}
+					}
+				},
+				"description": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"color": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						},
+						"suggest": {
+							"type": "completion"
+						}
+					}
+				},
+				"season": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"whsl": {
+					"type": "float"
+				},
+				"msrp": {
+					"type": "float"
+				},
+				"panty_size": {
+					"type": "keyword"
+				},
+				"band_size": {
+					"type": "integer"
+				},
+				"adjusted_band_size": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"adjusted_band_size_int": {
+					"type": "integer"
+				},
+				"cup_size": {
+					"type": "keyword"
+				},
+				"adjusted_cup_size": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"size": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"quantity": {
+					"type": "integer"
+				},
+				"similar_fit": {
+					"type": "keyword"
+				},
+				"style_coverage": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"style_design": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"style_wardrobe": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"vertical_fullness_fit": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"root_width_fit": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"placement_spread": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"projected": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				},
+				"matching_panties": { 
+					"type": "keyword"
+				},
+				"hook_notes": { 
+					"type": "keyword"
+				},
+				"notes": { 
+					"type": "keyword"
+				},
+				"discontinued": {
+					"type": "boolean"
+				},
+				"panty_size": {
+					"type": "keyword"
+				},
+				"adjusted_panty_size": {
+					"type": "text",
+					"fields": {
+						"raw": { 
+							"type": "keyword"
+						}
+					}
+				}
+			}
+		},
+		"invoice": {
+			"_all": { "enabled": false },
+			"properties": {
+				"order": {
+					"properties": {
+						"invoice_id": {
+							"type": "keyword"
+						},
+						"basket": {
+							"properties": {
+								"quickbooks_id": {
+									"type": "keyword"
+								},
+								"shopify_id": {
+									"type": "keyword"
+								},
+								"type": {
+									"type": "keyword"
+								},
+								"upc": {
+									"type": "keyword",
+									"fields": {
+										"suggest": {
+											"type": "completion",
+											"analyzer": "keyword"
+										}
+									}
+								},
+								"brand": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"style": {
+									"type": "text",
+									"fields": {
+										"raw": {
+											"type": "keyword"
+										}
+									}
+								},
+								"item_type": {
+									"type": "text",
+									"fields": {
+										"raw": {
+											"type": "keyword"
+										}
+									}
+								},
+								"range": {
+									"type": "text",
+									"fields": {
+										"raw": {
+											"type": "keyword"
+										}
+									}
+								},
+								"category": {
+									"type": "text",
+									"fields": {
+										"raw": {
+											"type": "keyword"
+										}
+									}
+								},
+								"subcategory": {
+									"type": "text",
+									"fields": {
+										"raw": {
+											"type": "keyword"
+										}
+									}
+								},
+								"similar_fit": {
+									"type": "text",
+									"fields": {
+										"raw": {
+											"type": "keyword"
+										}
+									}
+								},
+								"description": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"color": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										},
+										"suggest": {
+											"type": "completion"
+										}
+									}
+								},
+								"season": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"whsl": {
+									"type": "float"
+								},
+								"msrp": {
+									"type": "float"
+								},
+								"panty_size": {
+									"type": "keyword"
+								},
+								"band_size": {
+									"type": "integer"
+								},
+								"adjusted_band_size": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"adjusted_band_size_int": {
+									"type": "integer"
+								},
+								"cup_size": {
+									"type": "keyword"
+								},
+								"adjusted_cup_size": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"quantity": {
+									"type": "integer"
+								},
+								"similar_fit": {
+									"type": "keyword"
+								},
+								"style_coverage": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"style_design": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"style_wardrobe": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"vertical_fullness_fit": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"root_width_fit": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"placement_spread": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"projected": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"matching_panties": { 
+									"type": "keyword"
+								},
+								"hook_notes": { 
+									"type": "keyword"
+								},
+								"notes": { 
+									"type": "keyword"
+								},
+								"discontinued": {
+									"type": "boolean"
+								},
+								"panty_size": {
+									"type": "keyword"
+								},
+								"adjusted_panty_size": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								}
+							}
+						},
+						"email": {
+							"type": "keyword"
+						},
+						"closed_at": {
+							"type": "date"
+						},
+						"created_at": {
+							"type": "date",
+							"format": "date_time_no_millis"
+						},
+						"updated_at": {
+							"type": "date"
+						},
+						"number": {
+							"type": "integer"
+						},
+						"note": {
+							"type": "text"
+						},
+						"total_price": {
+							"type": "float"
+						},
+						"subtotal_price": {
+							"type": "float"
+						},
+						"total_weight": {
+							"type": "float"
+						},
+						"total_tax": {
+							"type": "float"
+						},
+						"taxes_included": {
+							"type": "boolean"
+						},
+						"tax_lines": {
+							"properties": {
+								"title": {
+									"type": "keyword"
+								},
+								"price": {
+									"type": "float"
+								},
+								"rate": {
+									"type": "float"
+								}
+							}
+						},
+						"currency": {
+							"type": "keyword"
+						},
+						"financial_status": {
+							"type": "keyword"
+						},
+						"total_discounts": {
+							"type": "float"
+						},
+						"total_line_items_price": {
+							"type": "float"
+						},
+						"name": {
+							"type": "keyword"
+						},
+						"cancelled_at": {
+							"type": "date"
+						},
+						"cancel_reason": {
+							"type": "keyword"
+						},
+						"total_price_usd": {
+							"type": "float"
+						},
+						"location_id": {
+							"type": "long"
+						},
+						"order_number": {
+							"type": "integer"
+						},
+						"fulfillment_status": {
+							"type": "keyword"
+						},
+						"tags": {
+							"type": "keyword"
+						},
+						"contact_email": {
+							"type": "keyword"
+						},
+						"items": {
+							"type": "keyword"
+						},
+						"line_items": {
+							"properties": {
+								"id": {
+									"type": "long"
+								},
+								"variant_id": {
+									"type": "long"
+								},
+								"title": {
+									"type": "keyword"
+								},
+								"quantity": {
+									"type": "integer"
+								},
+								"price": {
+									"type": "float"
+								},
+								"grams": {
+									"type": "float"
+								},
+								"sku": {
+									"type": "keyword"
+								},
+								"variant_title": {
+									"type": "keyword"
+								},
+								"product_id": {
+									"type": "long"
+								},
+								"gift_card": {
+									"type": "boolean"
+								},
+								"name": {
+									"type": "keyword"
+								},
+								"charge_delay": {
+									"type": "integer"
+								},
+								"recurring_price": {
+									"type": "float"
+								},
+								"shipping_interval_frequency": {
+									"type": "integer"
+								},
+								"shipping_interval_unit_type": {
+									"type": "keyword"
+								},
+								"total_discount": {
+									"type": "float"
+								},
+								"fulfillment_status": {
+									"type": "keyword"
+								},
+								"tax_lines": {
+									"properties": {
+										"title": {
+											"type": "keyword"
+										},
+										"price": {
+											"type": "float"
+										},
+										"rate": {
+											"type": "float"
+										}
+									}
+								}
+							}
+						},
+						"shipping_lines": {
+							"properties": {
+								"id": {
+									"type": "long"
+								},
+								"title": {
+									"type": "keyword"
+								},
+								"price": {
+									"type": "float"
+								},
+								"code": {
+									"type": "keyword"
+								}
+							}
+						},
+						"fulfillments": {
+							"properties": {
+								"id": {
+									"type": "long"
+								},
+								"order_id": {
+									"type": "long"	
+								},
+								"status": {
+									"type": "keyword"
+								},
+								"created_at": {
+									"type": "date",
+									"format": "date_time_no_millis"
+								},
+								"updated_at": {
+									"type": "date"
+								},
+								"tracking_company": {
+									"type": "keyword"
+								},
+								"tracking_number": {
+									"type": "keyword"
+								},
+								"tracking_numbers": {
+									"type": "keyword"
+								},
+								"tracking_url": {
+									"type": "keyword"
+								},
+								"tracking_urls": {
+									"type": "keyword"
+								},
+								"line_items": {
+									"properties": {
+										"id": {
+											"type": "long"
+										},
+										"variant_id": {
+											"type": "long"
+										},
+										"title": {
+											"type": "keyword"
+										},
+										"quantity": {
+											"type": "integer"
+										},
+										"price": {
+											"type": "float"
+										},
+										"grams": {
+											"type": "float"
+										},
+										"sku": {
+											"type": "keyword"
+										},
+										"variant_title": {
+											"type": "keyword"
+										},
+										"product_id": {
+											"type": "long"
+										},
+										"gift_card": {
+											"type": "boolean"
+										},
+										"name": {
+											"type": "keyword"
+										},
+										"charge_delay": {
+											"type": "integer"
+										},
+										"recurring_price": {
+											"type": "float"
+										},
+										"shipping_interval_frequency": {
+											"type": "integer"
+										},
+										"shipping_interval_unit_type": {
+											"type": "keyword"
+										},
+										"total_discount": {
+											"type": "float"
+										},
+										"fulfillment_status": {
+											"type": "keyword"
+										},
+										"tax_lines": {
+											"properties": {
+												"title": {
+													"type": "keyword"
+												},
+												"price": {
+													"type": "float"
+												},
+												"rate": {
+													"type": "float"
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						"billing_address": {
+							"properties": {
+								"first_name": {
+									"type": "keyword"
+								},
+								"last_name": {
+									"type": "keyword"
+								},
+								"address1": {
+									"type": "keyword"
+								},
+								"address2": {
+									"type": "keyword"
+								},
+								"phone": {
+									"type": "keyword"
+								},
+								"city": {
+									"type": "keyword"
+								},
+								"zip": {
+									"type": "keyword"
+								},
+								"province": {
+									"type": "keyword"
+								},
+								"country": {
+									"type": "keyword"
+								},
+								"company": {
+									"type": "keyword"
+								},
+								"location": {
+									"type": "geo_point"
+								},
+								"country_code": {
+									"type": "keyword"
+								},
+								"province_code": {
+									"type": "keyword"
+								}
+							}
+						},
+						"shipping_address": {
+							"properties": {
+								"first_name": {
+									"type": "keyword"
+								},
+								"last_name": {
+									"type": "keyword"
+								},
+								"address1": {
+									"type": "keyword"
+								},
+								"address2": {
+									"type": "keyword"
+								},
+								"phone": {
+									"type": "keyword"
+								},
+								"city": {
+									"type": "keyword"
+								},
+								"zip": {
+									"type": "keyword"
+								},
+								"province": {
+									"type": "keyword"
+								},
+								"country": {
+									"type": "keyword"
+								},
+								"company": {
+									"type": "keyword"
+								},
+								"location": {
+									"type": "geo_point"
+								},
+								"country_code": {
+									"type": "keyword"
+								},
+								"province_code": {
+									"type": "keyword"
+								}
+							}
+						},
+						"refunds": {
+							"properties": {
+								"id": {
+									"type": "long"
+								},
+								"order_id": {
+									"type": "long"
+								},
+								"created_at": {
+									"type": "date",
+									"format": "date_time_no_millis"
+								},
+								"note": {
+									"type": "text"
+								},
+								"restock": {
+									"type": "keyword"
+								},
+								"user_id": {
+									"type": "long"
+								},
+								"refund_line_items": {
+									"properties": {
+										"id": {
+											"type": "long"
+										},
+										"quantity": {
+											"type": "integer"
+										},
+										"line_item_id": {
+											"type": "long"
+										},
+										"subtotal": {
+											"type": "float"
+										},
+										"total_tax": {
+											"type": "float"
+										},
+										"line_item": {
+											"properties": {
+												"id": {
+													"type": "long"
+												},
+												"variant_id": {
+													"type": "long"
+												},
+												"title": {
+													"type": "keyword"
+												},
+												"quantity": {
+													"type": "integer"
+												},
+												"price": {
+													"type": "float"
+												},
+												"grams": {
+													"type": "float"
+												},
+												"sku": {
+													"type": "keyword"
+												},
+												"variant_title": {
+													"type": "keyword"
+												},
+												"product_id": {
+													"type": "long"
+												},
+												"gift_card": {
+													"type": "boolean"
+												},
+												"name": {
+													"type": "keyword"
+												},
+												"charge_delay": {
+													"type": "integer"
+												},
+												"recurring_price": {
+													"type": "float"
+												},
+												"shipping_interval_frequency": {
+													"type": "integer"
+												},
+												"shipping_interval_unit_type": {
+													"type": "keyword"
+												},
+												"total_discount": {
+													"type": "float"
+												},
+												"fulfillment_status": {
+													"type": "keyword"
+												},
+												"tax_lines": {
+													"properties": {
+														"title": {
+															"type": "keyword"
+														},
+														"price": {
+															"type": "float"
+														},
+														"rate": {
+															"type": "float"
+														}
+													}
+												}
+											}
+										}
+									}
+								},
+								"transactions": {
+									"properties": {
+										"id": {
+											"type": "long"
+										},
+										"order_id": {
+											"type": "long"
+										},
+										"amount": {
+											"type": "float"
+										},
+										"kind": {
+											"type": "keyword"
+										},
+										"status": {
+											"type": "keyword"
+										},
+										"message": {
+											"type": "keyword"
+										},
+										"created_at": {
+											"type": "date",
+											"format": "date_time_no_millis"
+										},
+										"currency": {
+											"type": "keyword"
+										},
+										"location_id": {
+											"type": "long"
+										},
+										"user_id": {
+											"type": "long"
+										},
+										"parent_id": {
+											"type": "long"
+										},
+										"device_id": {
+											"type": "long"
+										}
+									}
+								},
+								"order_adjustments": {
+									"properties": {
+										"id": {
+											"type": "long"
+										},
+										"order_id": {
+											"type": "long"
+										},
+										"refund_id": {
+											"type": "long"
+										},
+										"tax_amount": {
+											"type": "float"
+										},
+										"kind": {
+											"type": "keyword"
+										},
+										"reason": {
+											"type": "keyword"
+										}
+									}
+								}
+							}
+						},
+						"customer": {
+							"properties": {
+								"id": {
+									"type": "long"
+								},
+								"total_spent": {
+									"type": "float"
+								},
+								"recurring": {
+									"type": "boolean"
+								},
+								"email": {
+									"type": "keyword"
+								},
+								"phone": {
+									"type": "keyword"
+								},
+								"age": {
+									"type": "integer"
+								},
+								"how": {
+									"type": "keyword"
+								},
+								"created_at": {
+									"type": "date",
+									"format": "date_time_no_millis"
+								},
+								"first_name": {
+									"type": "keyword"
+								},
+								"last_name": {
+									"type": "keyword"
+								},
+								"state": {
+									"type": "keyword"
+								},
+								"is_happy": {
+									"type": "boolean"
+								},
+								"surgery_augmentation": {
+									"type": "boolean"
+								},
+								"surgery_mastectomy": {
+									"type": "boolean"
+								},
+								"allowance_bra": {
+									"properties": {
+										"min": {
+											"type": "integer"
+										},
+										"max": {
+											"type": "integer"
+										}
+									}
+								},
+								"allowance_panty": {
+									"properties": {
+										"min": {
+											"type": "integer"
+										},
+										"max": {
+											"type": "integer"
+										}
+									}
+								},
+								"computed_cup_size": {
+									"type": "keyword"
+								},
+								"current_manufacturer": {
+									"type": "keyword"
+								},
+								"surgery_male_female": {
+									"type": "boolean"
+								},
+								"style_coverage": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"current_band_size": {
+									"type": "integer"
+								},
+								"style_top": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"style_design": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"surgery_reduction": {
+									"type": "boolean"
+								},
+								"shape_space_between": {
+									"type": "integer"
+								},
+								"shape_fuller": {
+									"type": "keyword"
+								},
+								"current_cup_size": {
+									"type": "keyword"
+								},
+								"measure_lying": {
+									"type": "float"
+								},
+								"user_name": {
+									"type": "keyword"
+								},
+								"style_wardrobe": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"measure_waist": {
+									"type": "float"
+								},
+								"current_pant_size": {
+									"type": "integer"
+								},
+								"current_dress_size": {
+									"type": "integer"
+								},
+								"measure_tight": {
+									"type": "float"
+								},
+								"shape_spread": {
+									"type": "integer"
+								},
+								"current_band_size_dd": {
+									"type": "integer"
+								},
+								"measure_standing": {
+									"type": "float"
+								},
+								"measure_snug": {
+									"type": "float"
+								},
+								"measure_leaning": {
+									"type": "float"	
+								},
+								"computed_band_size": {
+									"type": "integer"
+								},
+								"like_fit": {
+									"type": "text"
+								},
+								"current_cup_size_dd": {
+									"type": "keyword"
+								},
+								"is_pregnant": {
+									"type": "boolean"
+								},
+								"checkout_frequency": {
+									"type": "integer"
+								},
+								"surgery_none": {
+									"type": "boolean"
+								},
+								"computed_sister_size": {
+									"type": "integer"	
+								},
+								"style_bottom": {
+									"type": "text",
+									"fields": {
+										"raw": { 
+											"type": "keyword"
+										}
+									}
+								},
+								"default_address": {
+									"properties": {
+										"id": {
+											"type": "long"
+										},
+										"first_name": {
+											"type": "keyword"
+										},
+										"last_name": {
+											"type": "keyword"
+										},
+										"company": {
+											"type": "keyword"
+										},
+										"address1": {
+											"type": "keyword"
+										},
+										"address2": {
+											"type": "keyword"
+										},
+										"city": {
+											"type": "keyword"
+										},
+										"province": {
+											"type": "keyword"
+										},
+										"country": {
+											"type": "keyword"
+										},
+										"zip": {
+											"type": "keyword"
+										},
+										"phone": {
+											"type": "keyword"
+										},
+										"province_code": {
+											"type": "keyword"
+										},
+										"country_code": {
+											"type": "keyword"
+										},
+										"country_name": {
+											"type": "keyword"	
+										},
+										"default": {
+											"type": "boolean"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
